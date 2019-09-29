@@ -1,0 +1,207 @@
+{
+  "aspect ratio parameter": {
+    "symbol": "ar_",
+    "notes": "Use with scale, fill, lfill, pad, lpad, mpad or crop. Use only h or w dimension and aspect ratio is maintained.",
+    "values": [{"val":"a:b","notes":""},{"val":"decimal","notes":"like 1.2"}]
+  },
+  "device pixel ratio": {
+    "symbol": "dpr_",
+    "notes": "Use with scale, fill, lfill, pad, lpad, mpad or crop. Use only h or w dimension and aspect ratio is maintained. Used with overlays: applies same resizing to overlay and underlay.",
+    "values": [{"val":"auto","notes":"Let cloudinary choose based on size of image"},{"val":"2.0","notes":""}]
+  },
+  "quality": {
+    "symbol": "q_",
+    "notes": " ",
+    "values": [{"val":"auto","notes":""},{"val":"","notes":""}]
+  },
+  "format": {
+    "symbol": "f_",
+    "notes": " ",
+    "values": [{"val":"auto","notes":""},{"val":"","notes":""}]
+  },
+  "width": {
+    "symbol": "w_",
+    "values": [
+      {
+        "val": "150",
+        "notes": ""
+      },
+      {
+        "val": ".5",
+        "notes": ""
+      },
+      {
+        "val": "iw",
+        "notes": ""
+      }
+    ],
+    "notes": "with just height or width, aspect ratio is maintained"
+  },
+  "height": {
+    "symbol": "h_",
+    "values": [
+      {
+        "val": "150",
+        "notes": ""
+      },
+      {
+        "val": ".5",
+        "notes": ""
+      },
+      {
+        "val": "ih",
+        "notes": ""
+      }
+    ],
+    "notes": "with just height or width, aspect ratio is maintained"
+  },
+  "background": {
+    "symbol": "b_",
+    "notes": "",
+    "values": []
+  },
+  "crop": {
+    "symbol": "c_",
+    "values": [
+      {
+        "val": "scale",
+        "notes": "If just width or height scaled to maintain aspect ratio, otherwise loses it unless you also use the 'ignore_aspect_ratio' flag (fl_)"
+      },
+      {
+        "val": "fit",
+        "notes": "Takes up as much space as needed within height and width and maintains aspect ratio."
+      },
+      {
+        "val": "limit",
+        "notes": "Same as fit but only if original image is larger."
+      },
+      {
+        "val": "m_fit",
+        "notes": "Same as fit but only if original image is smaller. You get the larger images if it is larger than the h/w specified."
+      },
+      {
+        "val": "fill",
+        "notes": "Create an image with exact size and no distortion.  Crops if apect ratio is different.  Use gravity to adjust specify what to keep."
+      },
+      {
+        "val": "lfill",
+        "notes": "Same as fill but only works if original image is larger than new h/w dimensions. No resizing if original is smaller. Croping can occur so you can use gravity."
+      },
+      {
+        "val": "pad",
+        "notes": "If proportions don't match padding is added. Use gravity and background for image placement and color of padding."
+      },
+      {
+        "val": "lpad",
+        "notes": "Like pad but only if original image is larger than h/w dimensions.Can use gravity and background."
+      },
+      {
+        "val": "mpad",
+        "notes": "Like pad but only if the original image is smaller than the h/w dimensions.Can use gravity and background."
+      },
+      {
+        "val": "fill_pad",
+        "notes": "Tries to prevent a bad crop by using fill and then adding padding to be able to include more of the image. Need to use with automatic cropping g_auto"
+      },
+      {
+        "val": "crop",
+        "notes": "Crop exact region based on h/w. Can use with gravity or fixed coordinates cropping (specifying x,y coords to start crop)."
+      },
+      {
+        "val": "thumb",
+        "notes": "Create a thumbnail. Must be accomanied by gravity setting with face or custom value. Can add zoom parameter to determing scaling."
+      },
+      {
+        "val": "imagga_crop",
+        "notes": "Uses imagga addon to pick best crop."
+      },
+      {
+        "val": "imagga_scale",
+        "notes": ""
+      }
+    ],
+    "notes": ""
+  },
+  "gravity": {
+    "symbol": "g_",
+    "notes": "Works with certain cropping modes to tell parts of the original to include when proportions don't match original or the image is smaller.  Also works with overlays to tell where to place on top.  ",
+    "values": [{
+      "val": "compass",
+      "notes": "north_east, north, north_west, west, south_west, south, south_east, east, or center which is the default."
+    },{
+      "val": "xy_center",
+      "notes": "Center of gravity given certain x,y cooridinates."
+    },
+    {
+      "val": "face",
+      "notes": ""
+    },
+    {
+      "val": "faces",
+      "notes": ""
+    },
+    {
+      "val": "face:center",
+      "notes": ""
+    },
+    {
+      "val": "liquid",
+      "notes": ""
+    },
+    {
+      "val": "auto",
+      "notes": ""
+    },
+    {
+      "val": "ocr_text",
+      "notes": ""
+    },
+    {
+      "val": "adv_face",
+      "notes": ""
+    },
+    {
+      "val": "adv_faces",
+      "notes": ""
+    },
+    {
+      "val": "adv_eyes",
+      "notes": ""
+    },
+    {
+      "val": "custom",
+      "notes": ""
+    },
+    {
+      "val": "custom:face",
+      "notes": ""
+    },
+    {
+      "val": "custom:faces",
+      "notes": ""
+    },
+    {
+      "val": "custom:adv_face",
+      "notes": ""
+    },
+    {
+      "val": "custom:adv_faces",
+      "notes": ""
+    }]
+  },
+  "x": {
+    "symbol": "x_",
+    "notes": "Fixed coordinates cropping. Specifies upper left x coordiate in original.",
+    "values": []
+  },
+  "y": {
+    "symbol": "y_",
+    "notes": "Fixed coordinates cropping. Specifies upper left y coordiate in original.",
+    "values": []
+  },
+  "chain": {
+    "symbol": "/",
+    "notes": "Create a transformation to be applied to image preceding the symbol.",
+    "values": []
+  }
+}

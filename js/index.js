@@ -29,7 +29,7 @@ const outputHtml = matchs => {
                 <h4>${match.name} (${match.symbol}) </h4>
                 <div>
                     <small><span class="val-label">Values:</span><br> ${match.values.map(item => {
-                        return `${item.val} ${item.notes}`}).join('<br>')} 
+                        return `<span class="val-note">${item.val}</span> ${item.notes}`}).join('<br>')} 
                     </small>
                 </div>
                  <div>
